@@ -9,7 +9,7 @@ import java.time.Instant;
 import java.time.ZoneOffset;
 import java.time.format.DateTimeFormatter;
 
-public class SimpleRestServer {
+public class WordClockRestServer {
 
     public static void main(String[] args) throws IOException {
         // Create an HttpServer instance bound to a specific address and port
