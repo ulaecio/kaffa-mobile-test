@@ -1,4 +1,4 @@
-# Todolist Application
+# ToDoList Application
 
 This is a simple Todolist application that uses MongoDB Atlas as its database. Follow the instructions below to set up and run the application on your local machine.
 
@@ -6,13 +6,72 @@ This is a simple Todolist application that uses MongoDB Atlas as its database. F
 
 Before you begin, make sure you have the following installed on your system:
 
-- [Node.js](https://nodejs.org/) (v14.x or higher)
-- [npm](https://www.npmjs.com/get-npm) (v6.x or higher)
+- [Node.js](https://nodejs.org/) (v18.x or higher)
+- [npm](https://www.npmjs.com/get-npm) (v10.x or higher)
 - [MongoDB Atlas Account](https://www.mongodb.com/cloud/atlas) (for creating a cloud database)
+- 
+Start by cloning the repository to your local machine:
 
+### 1. Clone the Repository
+```bash
+git clone https://github.com/your-username/kaffa-mobile-test.git
+cd ToDoList
+```
+
+
+### 2. Running the Server
+
+1. Navigate to the `ToDoList/server` directory:
+
+    ```bash
+    cd server
+    ```
+
+2. Install the server dependencies:
+
+    ```bash
+    npm install
+    ```
+
+3. Start the server:
+
+    ```bash
+    npm start
+    ```
+
+   The server should now be running on `http://localhost:5000`.
+
+### 3. Running the Frontend Application
+
+1. Open a new terminal and navigate to the `ToDoList/client` directory:
+
+    ```bash
+    cd client
+    ```
+
+2. Install the frontend dependencies:
+
+    ```bash
+    npm install
+    ```
+
+3. Start the frontend application:
+
+    ```bash
+    npm start
+    ```
+
+   The frontend should now be running on `http://localhost:3000`.
+
+### 4. Configuring Proxy (Optional)
+
+If your frontend application makes API requests to the backend, you may need to set up a proxy in the frontend to avoid CORS issues. To do this, add the following line to the `client/package.json` file:
+
+```json
+"proxy": "http://localhost:5000"
+```
 
 # Getting Started with Create React App
-
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -42,10 +101,3 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-Start by cloning the repository to your local machine:
-
-### 1. Clone the Repository
-```bash
-git clone https://github.com/your-username/todolist-app.git
-cd todolist-app
