@@ -1,0 +1,56 @@
+-- Table for Clients
+CREATE TABLE Clients (
+    ClientID INT AUTO_INCREMENT PRIMARY KEY,
+    Name VARCHAR(100) NOT NULL,
+    Email VARCHAR(100) UNIQUE NOT NULL,
+    Address TEXT,
+    PhoneNumber VARCHAR(20)
+);
+
+-- Table for Products
+CREATE TABLE Products (
+    ProductID INT AUTO_INCREMENT PRIMARY KEY,
+    Name VARCHAR(100) NOT NULL,
+    Description TEXT,
+    Price DECIMAL(10, 2) NOT NULL,
+    StockQuantity INT NOT NULL
+);
+
+-- Table for Orders
+CREATE TABLE Orders (
+    OrderID INT AUTO_INCREMENT PRIMARY KEY,
+    ClientID INT NOT NULL,
+    OrderDate DATETIME DEFAULT CURRENT_TIMESTAMP,
+    TotalAmount DECIMAL(10, 2) NOT NULL,
+    FOREIGN KEY (ClientID) REFERENCES Clients(ClientID)
+);
+
+-- Table for OrderItems
+CREATE TABLE OrderItems (
+    OrderItemID INT AUTO_INCREMENT PRIMARY KEY,
+    OrderID INT NOT NULL,
+    ProductID INT NOT NULL,
+    Quantity INT NOT NULL,
+    PriceAtOrderTime DECIMAL(10, 2) NOT NULL,
+    FOREIGN KEY (OrderID) REFERENCES Orders(OrderID),
+    FOREIGN KEY (ProductID) REFERENCES Products(ProductID)
+);
+
+-- Indexes
+CREATE INDEX idx_email ON Clients(Email);
+CREATE INDEX idx_product_name ON Products(Name);
+CREATE INDEX idx_orders_clientid ON Orders(ClientID);
+CREATE INDEX idx_orders_orderdate ON Orders(OrderDate);
+CREATE INDEX idx_orderitems_orderid ON OrderItems(OrderID);
+CREATE INDEX idx_orderitems_productid ON OrderItems(ProductID);
+
+-- SQL to list Orders with number of items
+SELECT 
+    o.OrderID,
+    COUNT(oi.OrderItemID) AS NumberOfItems
+FROM 
+    Orders o
+JOIN 
+    OrderItems oi ON o.OrderID = oi.OrderID
+GROUP BY 
+    o.OrderID;
