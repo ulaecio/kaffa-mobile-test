@@ -13,8 +13,8 @@ Before you begin, make sure you have the following installed on your system:
 
 - [Node.js](https://nodejs.org/) (v18.x or higher)
 - [npm](https://www.npmjs.com/get-npm) (v10.x or higher)
-- [MongoDB Atlas Account](https://www.mongodb.com/cloud/atlas) (for creating a cloud database)
-- 
+- [MongoDB Atlas Account](https://www.mongodb.com/cloud/atlas) (If you want to create your own cloud database), but you don´t need it.
+
 Start by cloning the repository to your local machine:
 
 ### 1. Clone the Repository

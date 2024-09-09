@@ -9,4 +9,3 @@
 - **05**: [WorldClockRestClient](https://github.com/ulaecio/kaffa-mobile-test/tree/main/WorldClockRestClient).
 - **06**: [WordClockRestServer](https://github.com/ulaecio/kaffa-mobile-test/tree/main/WordClockRestServer).
 - **07**: [EntityRelationshipDiagram](https://github.com/ulaecio/kaffa-mobile-test).
-- **08**: [UXPrototype](https://github.com/ulaecio/kaffa-mobile-test).
