@@ -2,6 +2,11 @@
 
 This is a simple Todolist application that uses MongoDB Atlas as its database. Follow the instructions below to set up and run the application on your local machine.
 
+
+![Application](https://raw.githubusercontent.com/ulaecio/todolist/main/todolist-1.PNG)
+
+![Mongo DataBase](https://raw.githubusercontent.com/ulaecio/todolist/main/todolist-2.PNG)
+
 ## Prerequisites
 
 Before you begin, make sure you have the following installed on your system:
